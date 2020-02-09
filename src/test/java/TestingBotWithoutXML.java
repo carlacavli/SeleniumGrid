@@ -17,20 +17,23 @@ public class TestingBotWithoutXML {
 
     @BeforeClass
     public void setup() throws MalformedURLException {
-        DesiredCapabilities cap = new DesiredCapabilities();
-        cap.setBrowserName("chrome");
-        cap.setCapability("name", "Selenium Testing Bot Test 1");
+        DesiredCapabilities caps = new DesiredCapabilities();
+        caps.setBrowserName("chrome");
+        caps.setCapability("name", "Android Test 1 - Galaxy S9");
+        caps.setCapability("platform", "Android");
+        caps.setCapability("version", "9.0");
+        caps.setCapability("browserName", "Chrome");
+        caps.setCapability("deviceName", "Galaxy S9");
+        caps.setCapability("platformName", "Android");
 
         URL url = new URL(HUB_URL);
-        driver = new RemoteWebDriver(url, cap);
+        driver = new RemoteWebDriver(url, caps);
 
     }
 
     @Test
     public void test() {
         driver.get("https://google.com");
-        driver.manage().window().maximize();
-
     }
 
     @AfterClass
