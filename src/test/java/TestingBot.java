@@ -20,8 +20,9 @@ public class TestingBot {
     public void setup(String browser) throws MalformedURLException {
         DesiredCapabilities cap = new DesiredCapabilities();
         cap.setBrowserName(browser);
-        URL url = new URL(HUB_URL);
+        cap.setCapability("name", "Selenium Testing Bot Test 1");
 
+        URL url = new URL(HUB_URL);
         driver = new RemoteWebDriver(url, cap);
 
     }
