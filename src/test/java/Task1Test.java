@@ -18,7 +18,6 @@ public class Task1Test {
     @BeforeClass
     public void setup() throws MalformedURLException {
         caps = new DesiredCapabilities();
-        caps.setBrowserName("chrome");
         caps.setCapability("name", "Task 1 test");
         url = new URL(HUB_URL);
     }
