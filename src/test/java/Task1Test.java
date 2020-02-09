@@ -19,7 +19,7 @@ public class Task1Test {
     public void setup() throws MalformedURLException {
         caps = new DesiredCapabilities();
         caps.setBrowserName("chrome");
-        caps.setCapability("name", "Android Test 1 - Galaxy S9");
+        caps.setCapability("name", "Task 1 test");
         url = new URL(HUB_URL);
     }
 
