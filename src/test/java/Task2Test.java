@@ -19,7 +19,7 @@ public class Task2Test {
     @BeforeClass
     public void setup() throws MalformedURLException {
         caps = new DesiredCapabilities();
-        caps.setCapability("name", "Task 1 test");
+        caps.setCapability("name", "Task 2 test");
         url = new URL(HUB_URL);
     }
 
