@@ -1,3 +1,4 @@
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -17,7 +18,9 @@ public class SimpleTest {
     public void setup(String browser) throws MalformedURLException {
         DesiredCapabilities cap = new DesiredCapabilities();
         cap.setBrowserName(browser);
-        URL url = new URL("http://localhost:4444/wd/hub");
+        cap.setPlatform(Platform.MAC);
+        cap.setCapability("name", "web driver demo test");
+        URL url = new URL("https://carlacavli:b9e1215f-f739-48c6-b5aa-815df22d8c0b@ondemand.saucelabs.com:443/wd/hub");
 
         driver = new RemoteWebDriver(url, cap);
 
